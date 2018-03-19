@@ -7,7 +7,7 @@
 
 if [[ -z $1 ]] || [[ -z $2 ]]
 then
-  echo 'Please provide a warning and critical values(in Millisecond).the first value is warining and the second is critical'
+  echo 'Please provide warning and critical values (in Millisecond). The first value is warning and the second is critical.'
   exit
 fi
 
@@ -15,7 +15,7 @@ NUMBER_VALIDATION='^[0-9]+$'
 if ! [[ $1 =~ $NUMBER_VALIDATION ]] || ! [[ $2 =~ $NUMBER_VALIDATION ]]
 then
   echo 'Please provide only number in the warining and critical values'
-  exit
+  exit 3
 fi
 
 if [ -f /etc/init.d/chronyd ]
